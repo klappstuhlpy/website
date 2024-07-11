@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+.top-bar {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)); /* Adjust the opacity as needed */
+    padding: 5px;
+    transition: background 0.3s ease;
+}
+
+.top-bar:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)); /* Adjust the opacity as needed */
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button {
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    --button-opacity: 0.5;
+    color: white;
+    font-size: 17px;
+
+    margin: 10px 3%;
+}
+
+.button:hover {
+    --button-opacity: 1;
+}
+
+.button svg {
+    height: 20px;
+    width: 20px;
+    margin-right: 4px;
+    margin-top: -4px;
+}
+
+.discord-button {
+    background-color: rgba(6, 78, 59, var(--button-opacity));
+}
+
+.home-button {
+    background-color: rgba(113, 63, 18, var(--button-opacity));
+}
+
+.docs-button {
+    background-color: rgba(124, 45, 18, var(--button-opacity));
+}
+
+.projects-button {
+    background-color: rgba(136, 19, 55, var(--button-opacity));
+}
+
+.button,
+.button:hover,
+.button:focus,
+.button:active,
+.button:visited {
+    text-decoration: none;
+    color: white;
+
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+@media (max-width: 768px) {
+    .button {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+/* Background */
+
+.background {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+    background-color: #010718;
+}
+
+@media (min-width: 768px) {
+    .background {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.background p:last-child {
+    margin-bottom: 0;
+}
+
+.background h1 {
+    font-weight: 300;
+}
+
+.background .container {
+    max-width: 40rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    body,
+    .background {
+        font-family: Jetbrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+        background-color: #010718;
+        color: blanchedalmond;
+    }
+
+    .background p:last-child {
+        color: #94a4b5 !important;
+    }
+
+    a {
+        font-size: 20px;
+        image-resolution: 300dpi;
+        color: #58a6ff;
+    }
+
+    .card {
+        background: blanchedalmond;
+    }
+}
+
+/* Footer
+
+Example:
+    <li class="nav-item">
+    <a href="https://github.com/klappstuhlpy" class="nav-link text-muted" target="_blank">Github</a>
+    </li>
+*/
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: #58a6ff;
+}
+
+.footer-container a {
+    font-size: 15px;
+}
+
+footer {
+    margin-top: auto;
+    padding: 3rem;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #6c757d;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
