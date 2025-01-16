@@ -255,6 +255,14 @@ pub async fn upload(
     /// ```
     let id = get_id();
     let path = format!("temp/{}.{:?}", id, form.file.content_type().unwrap().extension().unwrap());
+
+    match create_dir_all("temp") {
+        Ok(_) => (),
+        Err(e) => {
+            eprintln!("{:?}", e);
+            return Err(CustomError(Status::InternalServerError, "Failed to create temp directory.".to_owned()))
+        }
+    }
     form.file.persist_to(&path)
         .await
         .expect("Something went wrong when creating tempfile.");
