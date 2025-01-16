@@ -10,4 +10,5 @@ engines = { handlebars = ["templates"] }
 dir = "templates"
 
 [global.limits]
-file = 104857600
+file = 104857600  # 100 MB
+forms = 104857600  # 100 MB

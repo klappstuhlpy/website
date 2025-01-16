@@ -253,6 +253,11 @@ pub async fn upload(
     ///    "url": "https://cdn.klappstuhl.me/gallery/abc123.png"
     /// }
     /// ```
+    // Check if the file is too large or missing
+    if form.file.len() == 0 {
+        return Err(CustomError::new(Status::BadRequest, "File is empty or incomplete".to_owned()));
+    }
+
     let id = get_id();
     let path = format!("temp/{}.{:?}", id, form.file.content_type().unwrap().extension().unwrap());
 
