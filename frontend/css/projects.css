@@ -1,0 +1,123 @@
+body {
+    box-sizing: border-box;
+    color: white;
+}
+
+.text-title {
+    margin-top: 2rem;
+    text-align: center;
+    color: #e5e7eb;
+    font-size: 1.2rem;
+}
+
+.project-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.project {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 2px solid rgba(30, 41, 59, .5);
+    padding: 10px;
+    margin: 10px;
+    width: 750px;
+    height: 210px;
+    display: flex;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project .button {
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    font-size: 15px;
+
+    --button-opacity: 0.3;
+    background-color: rgba(55, 48, 163, var(--button-opacity));
+}
+
+.project .button:hover {
+    --button-opacity: 1;
+}
+
+.project .button,
+.project .button:hover,
+.project .button:focus,
+.project .button:active,
+.project .button:visited {
+    text-decoration: none;
+    color: white;
+
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.project:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.project h3 {
+    font-size: 20px;
+    margin: 10px 0 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.image-container {
+    width: 128px;
+    height: 128px;
+    overflow: initial;
+    position: relative;
+}
+
+.project-image {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 2px solid rgba(30, 41, 59, .5);
+}
+
+.project .title {
+    text-decoration: none;
+}
+
+.project .description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-size: 15px;
+    margin: 0;
+    text-overflow: ellipsis;
+}
+
+.project .description .links {
+    display: flex;
+    margin: 5px 4%;
+}
+
+.project .description .links a {
+    color: white;
+    text-decoration: none;
+}
+
+.project .description .links a svg {
+    height: 20px;
+    width: 20px;
+    margin-right: 4px;
+    margin-top: -4px;
+}

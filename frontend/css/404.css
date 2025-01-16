@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono&amp;display=swap');
+
+html {
+    font-family: DM Sans, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+.container {
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    display: flex;
+    margin-top: 30vh;
+
+    h1 {
+        margin: 0;
+        font-size: 2rem;
+        color: hsl(10 90% 50%/1);
+    }
+
+    h2 {
+        font-size: 6rem;
+        margin: 4px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        font-weight: inherit;
+        margin: 0
+    }
+
+    a {
+        color: inherit;
+        text-decoration: inherit
+    }
+
+    .button {
+        position: absolute;
+        align-items: center;
+        top: 100%;
+        margin-top: 24px;
+        display: flex;
+        border-radius: 9999px;
+
+        padding: 10px 24px;
+
+        color: hsl(10 90% 50%/1);
+        background-color: hsl(10 90% 90%/1);
+    }
+}

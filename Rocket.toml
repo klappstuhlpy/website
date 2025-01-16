@@ -1,0 +1,13 @@
+[default.databases.percy]
+url = "postgresql://percy:warmachine68@192.168.178.149/percy"
+
+[static]
+uri = "/static"
+dir = "frontend"
+
+[template]
+engines = { handlebars = ["templates"] }
+dir = "templates"
+
+[global.limits]
+file = 104857600
