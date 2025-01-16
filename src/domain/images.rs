@@ -250,7 +250,7 @@ pub async fn upload(
     /// ```json
     /// {
     ///    "id": "abc123",
-    ///    "url": "https://images.klappstuhl.me/gallery/abc123.png"
+    ///    "url": "https://cdn.klappstuhl.me/gallery/abc123.png"
     /// }
     /// ```
     let id = get_id();
@@ -293,7 +293,7 @@ pub async fn upload(
                 (
                     ContentType::JSON,
                     format!(
-                        r#"{{"id": "{}", "url": "https://images.klappstuhl_me/gallery/{}.{}"}}"#,
+                        r#"{{"id": "{}", "url": "https://cdn.klappstuhl.me/gallery/{}.{}"}}"#,
                         id, id, mimetype.split("/").collect::<Vec<&str>>()[1]
                     ).to_owned(),
                 ),
