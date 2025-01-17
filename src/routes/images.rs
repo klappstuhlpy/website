@@ -68,11 +68,6 @@ pub async fn index(_host: IMG) -> &'static str {
     "Image Database by Klappstuhl65"
 }
 
-#[get("/favicon.ico", rank = 1)]
-pub async fn favicon(_host: IMG) -> NamedFile {
-    NamedFile::open("img/favicon.ico").await.ok().unwrap()
-}
-
 #[derive(Debug)]
 pub struct ImageResponse(Vec<u8>, String, String);
 

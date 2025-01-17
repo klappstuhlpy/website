@@ -29,12 +29,12 @@ async fn main() {
     /// This needs to be done to prevent 413 errors when uploading large files to the databse
     rocket::build()
         .mount("/", routes![
-            main::index, main::projects,
-            images::index, images::favicon, images::upload, images::gallery,
+            main::index, main::favicon, main::projects,
+            images::index, images::upload, images::gallery,
             images::delete
         ])
         .mount("/templates", FileServer::from("templates"))
-        .mount("/static/img", FileServer::from("static/img"))
+        .mount("/static", FileServer::from("static"))
         .register("/", catchers![errors::catch_all_errors, errors::not_found])
         .attach(DB::init())
         .launch()

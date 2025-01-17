@@ -1,6 +1,6 @@
 #![allow(unused_imports)]
 
-use crate::hosts::WEB;
+use crate::hosts::{WEB};
 
 use rocket::fs::NamedFile;
 
@@ -15,6 +15,11 @@ pub async fn index(_host: WEB) -> Option<NamedFile> {
     /// # Returns
     /// * `Option<NamedFile>` - The index.html file
     NamedFile::open("templates/index.html").await.ok()
+}
+
+#[get("/favicon.ico", rank = 0)]
+pub async fn favicon(_host: WEB) -> NamedFile {
+    NamedFile::open("static/img/favicon.ico").await.ok().unwrap()
 }
 
 #[get("/projects", rank = 0)]
