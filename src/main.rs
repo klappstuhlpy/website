@@ -3,8 +3,8 @@
 #[macro_use]
 extern crate rocket;
 
-use crate::domain::main;
-use crate::domain::images;
+use crate::routes::main;
+use crate::routes::images;
 
 use rocket::fs::FileServer;
 use rocket::routes;
@@ -12,12 +12,12 @@ use rocket::routes;
 use rocket_db_pools::Database;
 
 mod hosts;
-mod domain;
+mod routes;
 mod errors;
 
 
 #[derive(Database)]
-#[database("percy")]
+#[database("website")]
 pub struct DB(rocket_db_pools::sqlx::PgPool);
 
 

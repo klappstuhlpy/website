@@ -24,7 +24,7 @@ pub async fn not_found(req: &Request<'_>) -> NotFoundResponse {
 
     return match content_type.contains("text/html") {
         true => {
-            NotFoundResponse::Html(NamedFile::open("frontend/html/404.html").await.ok().expect("404.html not found :/"))
+            NotFoundResponse::Html(NamedFile::open("templates/404.html").await.ok().expect("404.html not found :/"))
         }
         false => {
             return NotFoundResponse::Json(CustomError(Status::NotFound, "Not Found".to_string()));

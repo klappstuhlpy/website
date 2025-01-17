@@ -14,7 +14,7 @@ pub async fn index(_host: WEB) -> Option<NamedFile> {
     ///
     /// # Returns
     /// * `Option<NamedFile>` - The index.html file
-    NamedFile::open("frontend/html/index.html").await.ok()
+    NamedFile::open("templates/index.html").await.ok()
 }
 
 #[get("/projects", rank = 0)]
@@ -27,5 +27,5 @@ pub async fn projects(_host: WEB) -> Option<NamedFile> {
     ///
     /// # Returns
     /// * `Option<NamedFile>` - The projects.html file
-    NamedFile::open("frontend/html/projects.html").await.ok()
+    NamedFile::open("templates/projects.html").await.ok()
 }

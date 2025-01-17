@@ -21,6 +21,7 @@ mime = "0.3.17"
 tree_magic = "0.2.3"
 multipart = "0.18.0"
 imagesize = "0.13.0"
+askama = "0.12.1"
 
 [dependencies.rocket_db_pools]
 version = "=0.1.0-rc.3"
