@@ -33,8 +33,8 @@ async fn main() {
             images::index, images::favicon, images::upload, images::gallery,
             images::delete
         ])
-        .mount("/frontend", FileServer::from("frontend"))
-        .mount("/img", FileServer::from("img"))
+        .mount("/templates", FileServer::from("templates"))
+        .mount("/static/img", FileServer::from("static/img"))
         .register("/", catchers![errors::catch_all_errors, errors::not_found])
         .attach(DB::init())
         .launch()

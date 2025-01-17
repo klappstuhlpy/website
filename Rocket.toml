@@ -1,9 +1,9 @@
-[default.databases.percy]
-url = "postgresql://percy:warmachine68@192.168.178.149/percy"
+[default.databases.website]
+url = "postgresql://percy:warmachine68@192.168.178.149/website"
 
 [static]
 uri = "/static"
-dir = "frontend"
+dir = "templates"
 
 [template]
 engines = { handlebars = ["templates"] }
